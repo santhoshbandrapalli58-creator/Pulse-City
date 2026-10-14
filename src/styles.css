@@ -23,3 +23,27 @@
 .risk-brief{border-top:1px solid var(--ink);border-bottom:1px solid var(--line);padding:16px 0 18px;margin:1px 0 26px}.risk-brief-heading{display:flex;align-items:center;justify-content:space-between;color:var(--red)}.risk-brief h2{font-size:clamp(21px,3vw,37px);line-height:1.08;letter-spacing:-.065em;max-width:720px;margin:15px 0 18px}.risk-chain{display:flex;align-items:center;gap:13px;padding:12px 14px;background:var(--soft);font-size:8px;letter-spacing:.1em;font-weight:700}.risk-chain svg{width:13px;height:13px;color:var(--muted);flex:0 0 auto}.chain-danger{color:var(--red)}.risk-brief-bottom{display:grid;grid-template-columns:1fr 1fr 1.05fr;gap:24px;padding-top:18px}.risk-brief-bottom>div{border-left:1px solid var(--line);padding-left:13px}.risk-brief-bottom>div:first-child{border-left:0;padding-left:0}.risk-brief-bottom b{font-size:8px;letter-spacing:.11em}.risk-brief-bottom p{font-size:10px;line-height:1.6;color:var(--muted);max-width:330px;margin:8px 0}.risk-brief-bottom button{border:0;background:none;display:flex;gap:7px;align-items:center;padding:5px 0;font-size:7px;font-weight:700;letter-spacing:.1em}.risk-brief-bottom button:hover{color:var(--red)}.risk-brief-action{background:var(--ink);color:var(--paper);padding:14px 16px!important;border:0!important}.risk-brief-action .eyebrow{color:var(--muted)}.risk-brief-action strong{display:block;font-size:15px;line-height:1.3;letter-spacing:-.03em;margin-top:9px}.risk-brief-action p{font-size:9px;margin:6px 0}.risk-brief-action button{color:var(--paper)}.risk-brief-action button:hover{color:#ff6870}
 @media(max-width:780px){.risk-brief-bottom{grid-template-columns:1fr 1fr}.risk-brief-action{grid-column:1/-1}.risk-chain{flex-wrap:wrap;gap:9px}.risk-chain span{font-size:7px}}
 @media(max-width:560px){.risk-brief{padding-top:14px;margin-bottom:21px}.risk-brief h2{font-size:25px;margin:12px 0}.risk-chain{gap:7px;padding:10px;justify-content:center}.risk-chain svg{width:10px}.risk-chain span{font-size:6px;letter-spacing:.05em}.risk-brief-bottom{grid-template-columns:1fr;gap:15px}.risk-brief-bottom>div{border-left:0;border-top:1px solid var(--line);padding:12px 0 0}.risk-brief-bottom>div:first-child{border-top:0;padding-top:0}.risk-brief-action{padding:13px!important}}
+
+/* Readability, keyboard access, and clearer operator triage */
+:root{--muted:#66665f}
+:root[data-theme="dark"]{--muted:#b5b5ae}
+body{font-size:14px}
+.eyebrow,.small-copy,.live-indicator{font-size:10px}
+.skip-link{position:fixed;z-index:100;top:8px;left:12px;padding:11px 14px;background:var(--ink);color:var(--paper);transform:translateY(-160%);transition:transform .15s}
+.skip-link:focus{transform:translateY(0)}
+.page-title h1:focus{outline:2px solid var(--red);outline-offset:6px}
+.mobile-overlay{padding:0;border:0}
+.priority-actions{border-top:1px solid var(--ink);border-bottom:1px solid var(--line);padding:19px 0 17px;margin:0 0 28px}
+.priority-heading{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:12px}
+.priority-heading h2{font-size:clamp(22px,3vw,34px);line-height:1.1;letter-spacing:-.055em;margin:9px 0 0;max-width:680px}
+.priority-list article{display:grid;grid-template-columns:40px minmax(0,1fr) auto;align-items:center;gap:13px;border-top:1px solid var(--line);padding:13px 0}
+.priority-rank{font-size:11px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);display:flex;align-items:center;gap:8px}
+.priority-indicator{width:8px;height:8px;border-radius:50%;background:var(--red);position:relative}
+.priority-indicator:after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--red);animation:pulse 2s ease-out infinite}
+.priority-list h3{font-size:14px;margin:0;font-weight:650}
+.priority-list p{font-size:12px;line-height:1.45;color:var(--muted);margin:4px 0 0}
+.priority-list article>button,.priority-heading>.inline-link{display:flex;align-items:center;gap:7px;border:0;background:none;padding:9px 0;color:var(--ink);font-size:10px;font-weight:700;letter-spacing:.08em;text-align:right}
+.priority-list article>button:hover,.priority-heading>.inline-link:hover{color:var(--red)}
+.demo-stamp{margin-left:auto;margin-right:12px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.08em;text-align:right}
+@media(max-width:560px){.priority-heading{display:block}.priority-heading>.inline-link{margin-top:8px}.priority-list article{grid-template-columns:33px minmax(0,1fr);gap:9px}.priority-list article>button{grid-column:2;justify-self:start;padding:5px 0}.demo-stamp{font-size:8px;margin-right:8px}}
+@media(prefers-reduced-motion:reduce){.priority-indicator:after{animation:none}}

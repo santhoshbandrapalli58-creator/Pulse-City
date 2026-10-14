@@ -3,7 +3,7 @@ import { ArrowUpRight, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function Wordmark({ small = false }: { small?: boolean }) { return <span className={`wordmark ${small ? 'wordmark-small' : ''}`}><i className="pulse-dot" aria-hidden="true" />PULSE<span className="slash">/</span>CITY</span>; }
-export function PulseDot({ label }: { label?: string }) { return <span className="live-indicator"><i className="pulse-dot" />{label}</span>; }
+export function PulseDot({ label }: { label?: string }) { return <span className="live-indicator"><i className="pulse-dot" aria-hidden="true" />{label}</span>; }
 export function Rule({ className = '' }: { className?: string }) { return <motion.div className={`rule ${className}`} initial={{ scaleX: 0, transformOrigin: 'left' }} animate={{ scaleX: 1 }} transition={{ duration: .8, ease: 'easeOut' }} />; }
 export function SectionHeader({ n, title, detail, action }: { n: string; title: string; detail?: string; action?: string }) { return <div className="section-head"><span className="eyebrow">{n} / {title}</span><div className="section-head-right">{detail && <span className="muted small-copy">{detail}</span>}{action && <button className="text-action">{action}<ArrowUpRight size={14} /></button>}</div></div>; }
 export function Metric({ label, value, unit, change, accent = false }: { label: string; value: number | string; unit?: string; change?: string; accent?: boolean }) {

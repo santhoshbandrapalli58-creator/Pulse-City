@@ -43,7 +43,7 @@ PULSE/CITY is a smart-city transport resilience dashboard. It helps city teams e
 
 5. Open the local address printed by Vite, usually [http://localhost:5173](http://localhost:5173).
 
-The website and API can run without credentials. Demo sign-in accepts a valid email address and any password with at least six characters. The analyst uses a local sample response until a Gemini key is configured. To stop either process, press `Ctrl+C` in its terminal.
+The website and API can run without credentials. Demo sign-in accepts a valid email address and any password with at least six characters. The “Remember me” option keeps the demo profile on this browser; clear site storage to remove it. The analyst uses a local sample response until a Gemini key is configured. To stop either process, press `Ctrl+C` in its terminal.
 
 ## Optional services
 
