@@ -1,0 +1,9 @@
+{
+  "name": "pulse-city",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "tsc -b && vite build", "preview": "vite preview", "server": "node --experimental-strip-types server/index.ts", "start": "node --experimental-strip-types server/index.ts" },
+  "dependencies": { "@google/genai": "^1.11.0", "dotenv": "^16.6.1", "express": "^5.1.0", "firebase": "^11.10.0", "framer-motion": "^12.23.0", "lucide-react": "^0.468.0", "react": "^19.1.0", "react-dom": "^19.1.0", "recharts": "^2.15.4" },
+  "devDependencies": { "@types/express": "^5.0.3", "@types/node": "^22.15.0", "@types/react": "^19.1.0", "@types/react-dom": "^19.1.0", "@vitejs/plugin-react": "^4.6.0", "autoprefixer": "^10.4.21", "postcss": "^8.5.6", "tailwindcss": "^3.4.17", "tsx": "^4.19.0", "typescript": "~5.8.3", "vite": "^6.3.5" }
+}
